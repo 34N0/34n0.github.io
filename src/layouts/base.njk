@@ -14,9 +14,9 @@
     dark:text-white
     transition">
     {% include "toggle.njk" %}
-    <main id="main" class="sm:p-24 pt-16 pl-12 pr-12 h-fit w-full flex flex-col">
+    <main id="main" class="sm:p-24 pt-24 pl-12 pr-12 h-fit w-full flex flex-col">
       {% include "header.njk" %}
-      <h1>{{ meta.title }}</h1>
+      <h1 class="text-3xl pb-4">{{ title }}</h1>
       {{ content | safe }}
     </main>
   </body>

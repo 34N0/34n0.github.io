@@ -1,9 +1,7 @@
 ---
-meta:
-  title: My First Post
 layout: base
-title: My First Post
 tags: post
+title: my first post
 link: ..
 ---
 
