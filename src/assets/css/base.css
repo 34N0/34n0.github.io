@@ -32,5 +32,8 @@
       dark:text-blue-300;
   }
 
-  h1, li, a, p { @apply  transition; }
+  h1, li, a, p { 
+    @apply  
+      transition
+      max-w-[65ch]; }
 }
