@@ -16,12 +16,12 @@ pagination:
   {% set navPages = collections.all | eleventyNavigation %}
   <ul class="list-inside list-disc">
     <li>info</li>
-    <ul>
-      <li>descriptoin</li>
+    <ul class="list-inside list-disc pl-4">
+      <li>description</li>
       <li>some links</li>
     </ul>
     <li>all posts</li>
-    <ul>
+    <ul class="list-inside list-disc pl-4">
       {% for post in posts %}
       <li>
         <a href="{{post.url}}" hx-boost="true">{{ post.data.title }}</a>

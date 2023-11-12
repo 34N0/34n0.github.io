@@ -1,26 +1,36 @@
 /* custom base styles */
 
-/* Compagnon Script by Chloé Lozano (http://www.velvetyne.fr/fonts/compagnon/) */
 @font-face {
-  font-family: Compagnon;
-  font-style: bold;
-  src: url('../fonts/Compagnon-Bold.woff2');
+  font-family: Neon;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/MonaspaceNeon-Regular.woff');
+}
+
+@font-face {
+  font-family: Neon;
+  font-style: normal;
+  font-style: 600;
+  src: url('../fonts/MonaspaceNeon-SemiBold.woff');
 }
 
 @layer base {
-  body{ font-family: Compagnon; }
-
-  h1, a, li, .copyright { @apply dark:text-gray-400; }
-
-  h1 {
-    @apply text-5xl;
+ 
+  html { 
+    font-family: Neon, 'Courier New', Courier, monospace;
+    font-size: 18px;
   }
+
+  h1, header a { font-weight: 600;  }
 
   a {
     @apply 
-      text-2xl
       underline
       select-auto
-      cursor-pointer;
+      cursor-pointer
+      text-blue-800
+      dark:text-blue-300;
   }
+
+  h1, li, a, p { @apply  transition; }
 }

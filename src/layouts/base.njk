@@ -6,10 +6,18 @@
     <title>{{ site.title }} - {{ title or meta.title }}</title>
     {% include "meta.njk" %}
   </head>
-  <body class="p-0 bg-blue-300 dark:bg-blue-900">
-    <main id="main" class="p-4 h-fit w-full">
-        {% include "header.njk" %}
-        {{ content | safe }}
+  <body class="
+    p-0
+    bg-white
+    dark:bg-black
+    text-black
+    dark:text-white
+    transition">
+    {% include "toggle.njk" %}
+    <main id="main" class="sm:p-24 pt-16 pl-12 pr-12 h-fit w-full flex flex-col">
+      {% include "header.njk" %}
+      <h1>{{ meta.title }}</h1>
+      {{ content | safe }}
     </main>
   </body>
   <script type="module" src="{{ '/assets/js/index.js' | url }}"></script>

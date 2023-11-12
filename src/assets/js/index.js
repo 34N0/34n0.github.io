@@ -15,7 +15,7 @@ window.Alpine = Alpine;
 console.log('initialized alpinejs');
 
 Alpine.store('darkMode', {
-  on: Alpine.$persist(false).as('darkMode_on'),
+  on: Alpine.$persist(false).as('darkMode'),
   
   toggle() {
     this.on = ! this.on
