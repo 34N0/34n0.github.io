@@ -1,0 +1,26 @@
+/* custom base styles */
+
+/* Compagnon Script by Chloé Lozano (http://www.velvetyne.fr/fonts/compagnon/) */
+@font-face {
+  font-family: Compagnon;
+  font-style: bold;
+  src: url('../fonts/Compagnon-Bold.woff2');
+}
+
+@layer base {
+  body{ font-family: Compagnon; }
+
+  h1, a, li, .copyright { @apply dark:text-gray-400; }
+
+  h1 {
+    @apply text-5xl;
+  }
+
+  a {
+    @apply 
+      text-2xl
+      underline
+      select-auto
+      cursor-pointer;
+  }
+}

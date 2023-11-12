@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ meta.lang or site.lang }}" :class="{ 'dark': $store.darkMode.on }" x-data>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ site.title }} - {{ title or meta.title }}</title>
+    {% include "meta.njk" %}
+  </head>
+  <body class="p-0 bg-blue-300 dark:bg-blue-900">
+    {% include "header.njk" %}
+    <main id="main" class="p-4 h-fit w-full">
+        {{ content | safe }}
+    </main>
+    {% include "footer.njk" %} 
+  </body>
+  <script type="module" src="{{ '/assets/js/index.js' | url }}"></script>
+</html>
