@@ -11,7 +11,7 @@ console.log('baseUrl is set to ...', baseUrl);
 
 const globalSiteData = {
   title: "🛤️",
-  description: "34N0's developer blog featuring Software, self-hosting & security research.",
+  description: "34N0's developer blog featuring Software, self-hosting & security research. I write this blog as my personal knowledge database.",
   locale: 'en',
   baseUrl: baseUrl,
 }
