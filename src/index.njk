@@ -1,5 +1,5 @@
 ---
-title: home page
+title: 34N0's blog
 layout: base
 eleventyNavigation:
   key: home
@@ -15,16 +15,18 @@ pagination:
   <ul class="list-inside list-disc">
     <li>info</li>
     <ul class="list-inside list-disc pl-4">
-      <li>description</li>
-      <li>some links</li>
+      <li>{{ site.description }}</li>
+      <li><a href="https://github.com/34N0">github profile</a></li>
     </ul>
-    <li>all posts</li>
-    <ul class="list-inside list-disc pl-4">
-      {% for post in posts %}
-      <li>
-        <a href="{{post.url}}" hx-boost="true">{{ post.data.title }}</a>
-      </li>
-      {% endfor %}
-    </ul>
+    {% if posts|length > 0 %}
+      <li>all posts</li>
+      <ul class="list-inside list-disc pl-4">
+        {% for post in posts %}
+        <li>
+          <a href="{{post.url}}" hx-boost="true">{{ post.data.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   </ul>
 </nav>

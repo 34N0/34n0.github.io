@@ -10,8 +10,8 @@ const baseUrl = process.env.BASE_URL || "http://localhost:8080";
 console.log('baseUrl is set to ...', baseUrl);
 
 const globalSiteData = {
-  title: "11ty Starter Site",
-  description: "This is a basic 11ty starter template with my most commonly used features and modern tooling",
+  title: "🛤️",
+  description: "34N0's developer blog featuring Software, self-hosting & security research.",
   locale: 'en',
   baseUrl: baseUrl,
 }
