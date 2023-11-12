@@ -7,11 +7,10 @@
     {% include "meta.njk" %}
   </head>
   <body class="p-0 bg-blue-300 dark:bg-blue-900">
-    {% include "header.njk" %}
     <main id="main" class="p-4 h-fit w-full">
+        {% include "header.njk" %}
         {{ content | safe }}
     </main>
-    {% include "footer.njk" %} 
   </body>
   <script type="module" src="{{ '/assets/js/index.js' | url }}"></script>
 </html>

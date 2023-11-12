@@ -6,8 +6,27 @@ layout: base
 eleventyNavigation:
   key: Home
   order: 1
+pagination:
+  data: collections.post
+  size: 12
+  alias: posts
 ---
 
-<section>
-  <h1>Welcome Deploy Test</h1>
-</section>
+<nav>
+  {% set navPages = collections.all | eleventyNavigation %}
+  <ul class="list-inside list-disc">
+    <li>info</li>
+    <ul>
+      <li>descriptoin</li>
+      <li>some links</li>
+    </ul>
+    <li>all posts</li>
+    <ul>
+      {% for post in posts %}
+      <li>
+        <a href="{{post.url}}" hx-boost="true">{{ post.data.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </ul>
+</nav>

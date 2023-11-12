@@ -1,21 +1,3 @@
-
 <header>
-  <nav>
-    {% set navPages = collections.all | eleventyNavigation %}
-    <ul class="list-inside list-disc">
-    {%- for entry in navPages %}
-      <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
-        <a href="{{ entry.url }}" hx-boost="true">{{ entry.title }}</a>
-      </li>
-    {%- endfor %}
-      <li class="
-      list-inside
-      text-2xl
-      cursor-pointer
-      select-none
-      no-script"
-      @click="$store.darkMode.toggle()"
-      >Darkmode</li>
-    </ul>
-  </nav>
+  <h1>{{ meta.title }}</h1>
 </header>
