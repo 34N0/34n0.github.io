@@ -9,6 +9,7 @@
     "serve": "npx @11ty/eleventy --serve",
     "watch": "npx @11ty/eleventy --watch",
     "build": "npx @11ty/eleventy",
+    "build:prod": "ELEVENTY_ENV=production npx @11ty/eleventy",
     "preview": "npx @11ty/eleventy && npx serve dist",
     "clean": "del-cli _site"
   },
