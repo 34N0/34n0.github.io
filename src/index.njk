@@ -23,7 +23,7 @@ pagination:
       <ul class="list-inside list-disc pl-4">
         {% for post in posts %}
         <li>
-          <a href="{{post.url}}" hx-boost="true">{{ post.data.title }}</a>
+          <a href="{{post.url}}" hx-boost="true">{{post.data.title }} ({{ post.data.date | postDate }})</a>
         </li>
         {% endfor %}
       </ul>

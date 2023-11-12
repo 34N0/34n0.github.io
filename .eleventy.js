@@ -4,6 +4,7 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
 const Image = require("@11ty/eleventy-img");
 const yaml = require("js-yaml"); // Because yaml is nicer than json for editors
+const { DateTime } = require("luxon");
 require('dotenv').config();
 
 const baseUrl = process.env.BASE_URL || "http://localhost:8080";
@@ -78,6 +79,11 @@ module.exports = function(eleventyConfig) {
   // Custom Random Helper Filter (useful for ID attributes)
   eleventyConfig.addFilter("generateRandomIdString", function (prefix) {
     return prefix + "-" + Math.floor(Math.random() * 1000000);
+  });
+
+
+  eleventyConfig.addFilter("postDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
 
 
