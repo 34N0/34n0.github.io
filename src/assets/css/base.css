@@ -14,11 +14,24 @@
   src: url('../fonts/MonaspaceNeon-SemiBold.woff');
 }
 
+@font-face {
+  font-family: Neon;
+  font-style: normal;
+  font-weight: 100;
+  src: url('../fonts/MonaspaceNeon-ExtraLight.woff');
+}
+
+
 @layer base {
  
   html { 
     font-family: Neon, 'Courier New', Courier, monospace;
     font-size: 18px;
+  }
+
+  pre {
+    font-family: Neon;
+    font-weight: 100;
   }
 
   h1, header a { font-weight: 600;  }
