@@ -1,0 +1,27 @@
+{% macro snippet(content) %}
+  <div class="relative mb-4 max-w-prose">
+    <pre
+      class="
+      bg-[#161b22]
+      text-[#e6edf3]
+      text-sm
+      p-2
+      w-full
+      rounded-md">
+      {{ content|safe }}
+    </pre>
+    <span class="
+      absolute
+      top-2
+      text-[#e6edf3]
+      underline
+      text-sm
+      right-4
+      cursor-pointer
+      rounded-full"
+      x-clipboard.raw="{{ content|safe }}">
+      copy
+    </span>
+  </div>
+{% endmacro %}
+

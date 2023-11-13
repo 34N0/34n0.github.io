@@ -8,8 +8,11 @@ console.log('initialized htmx');
 
 import Alpine from 'alpinejs';
 import persist from '@alpinejs/persist';
+import Clipboard from "@ryangjchandler/alpine-clipboard"
 
 Alpine.plugin(persist);
+Alpine.plugin(Clipboard);
+
 window.Alpine = Alpine;
 
 console.log('initialized alpinejs');
