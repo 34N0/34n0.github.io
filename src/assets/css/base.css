@@ -52,7 +52,7 @@
       underline
       select-auto
       cursor-pointer
-      text-blue-800
+      text-[#0000EE]
       dark:text-blue-300;
   }
 
