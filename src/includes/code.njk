@@ -1,25 +1,24 @@
 {% macro snippet(content) %}
-  <div class="relative mb-4 max-w-prose">
+  <div class="relative mb-4 mt-4 max-w-prose pr-4 pb-4 bg-[#161b22] rounded-md">
     <pre
       class="
-      bg-[#161b22]
       text-[#e6edf3]
       text-sm
       pl-4
-      pt-4
-      pr-4
+      pt-8
+      pr-0
       w-full
-      rounded-md
-      overflow-x-scroll">
+      overflow-scroll
+      no-scrollbar">
       {{ content|safe }}
     </pre>
     <span class="
       absolute
-      top-2
+      top-1
       text-[#e6edf3]
       underline
       text-sm
-      right-4
+      right-2
       cursor-pointer
       rounded-full"
       x-clipboard.raw="{{ content|safe }}">
