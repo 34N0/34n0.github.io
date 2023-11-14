@@ -14,20 +14,24 @@ pagination:
   {% set navPages = collections.all | eleventyNavigation %}
   <ul class="list-inside list-disc">
     <li>info</li>
-    <ul class="list-inside list-disc pl-4">
-      <li>{{ site.description }}</li>
-      <li><a href="https://github.com/34N0">github profile</a></li>
-      <li><a href="mailto:uhchyf42o@mozmail.com">uhchyf42o@mozmail.com </a></li>
-    </ul>
+    <li class="list-none">
+      <ul class="list-inside list-disc pl-4">
+        <li>{{ site.description }}</li>
+        <li><a href="https://github.com/34N0">github profile</a></li>
+        <li><a href="mailto:uhchyf42o@mozmail.com">uhchyf42o@mozmail.com </a></li>
+      </ul>
+    </li>
     {% if posts|length > 0 %}
       <li>all posts</li>
-      <ul class="list-inside list-disc pl-4">
-        {% for post in posts %}
-        <li>
-          <a href="{{post.url}}" hx-boost="true">{{post.data.title }} ({{ post.data.date | postDate }})</a>
-        </li>
-        {% endfor %}
-      </ul>
+      <li class="list-none">
+        <ul class="list-inside list-disc pl-4">
+          {% for post in posts %}
+          <li>
+            <a href="{{post.url}}" hx-boost="true">{{post.data.title }} ({{ post.data.date | postDate }})</a>
+          </li>
+          {% endfor %}
+        </ul>
+      <li class="list-none">
     {% endif %}
   </ul>
 </nav>
