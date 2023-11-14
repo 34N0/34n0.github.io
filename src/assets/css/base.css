@@ -57,5 +57,8 @@
       transition;
   }
 
+  li { @apply pt-1 pb-1; }
+  li a { @apply pt-2 pb-2; }
+
   li, a, p { @apply max-w-prose; }
 }
