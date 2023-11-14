@@ -33,10 +33,19 @@
     font-weight: 100;
   }
 
+  b {
+    @apply 
+      bg-[#161b22]
+      text-[#e6edf3]
+      p-1
+      rounded-md;
+  }
+
+  h1 { @apply max-w-[37.5ch]; }
   h1, header a { font-weight: 600;  }
 
   h2 { @apply text-2xl pb-4 pt-4; }
-  h2:first-of-type { @apply pt-0; }
+  h3 { @apply mt-4 mb-4; }
 
   a {
     @apply 
@@ -47,6 +56,5 @@
       dark:text-blue-300;
   }
 
-  h1 { @apply max-w-[37.5ch]; }
   li, a, p { @apply transition max-w-prose; }
 }
