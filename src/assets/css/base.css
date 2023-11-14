@@ -53,8 +53,9 @@
       select-auto
       cursor-pointer
       text-[#0000EE]
-      dark:text-blue-300;
+      dark:text-blue-300
+      transition;
   }
 
-  li, a, p { @apply transition max-w-prose; }
+  li, a, p { @apply max-w-prose; }
 }
