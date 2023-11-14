@@ -10,7 +10,6 @@
 @font-face {
   font-family: Neon;
   font-style: normal;
-  font-style: 600;
   src: url('../fonts/MonaspaceNeon-SemiBold.woff');
 }
 
@@ -36,6 +35,9 @@
 
   h1, header a { font-weight: 600;  }
 
+  h2 { @apply text-2xl pb-4 pt-4; }
+  h2:first-of-type { @apply pt-0; }
+
   a {
     @apply 
       underline
@@ -45,8 +47,6 @@
       dark:text-blue-300;
   }
 
-  h1, li, a, p { 
-    @apply  
-      transition
-      max-w-[65ch]; }
+  h1 { @apply max-w-[37.5ch]; }
+  li, a, p { @apply transition max-w-prose; }
 }
