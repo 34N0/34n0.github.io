@@ -1,6 +1,6 @@
 ---
 layout: base
-title: 📨 sending e-mails from deployed docker container using a postfix service running on host
+title: 🔒📨 sending tls encrypted e-mails from docker containers
 tags: post
 meta:
   keywords: postfix, docker, phpmail, email, container, dokku, ubuntu, host
