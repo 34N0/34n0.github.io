@@ -57,7 +57,7 @@
       transition;
   }
 
-  li { @apply pt-1 pb-1; }
+  li { @apply pt-1 pb-1 w-full overflow-x-scroll }
   li a { @apply pt-2 pb-2; }
 
   li, a, p { @apply max-w-prose; }
